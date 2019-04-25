@@ -1,0 +1,91 @@
+* {
+    border-spacing: border-box;
+    font-family: "Anton", sans-serif;
+  }
+  
+  :root {
+    --box-color: rgb(213, 199, 230);
+    --bg-color: rgb(153, 157, 168);
+    --font-color: rgba(156, 87, 189, 0.863);
+  }
+  
+  .app {
+    margin: 0 auto;
+    max-width: 1000px;
+    background: var(--bg-color);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  li {
+    display: list-item;
+  }
+  
+  ul {
+    font-size: 24px;
+    list-style-type: square;
+  }
+  
+  p {
+    font-size: 24px;
+    margin-left: 12px;
+  }
+  
+  .list {
+    background-color: var(--box-color);
+    padding: 40px;
+    width: 70%;
+    margin-left: 100px;
+    margin-top: 40px;
+    border: 5px double black;
+  }
+  
+  .form {
+    margin: 0px 5%;
+    padding: 5px 5% 100px 5%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .form-content {
+    align-content: center;
+    margin-left: 300px;
+  }
+  
+  input {
+    font-size: 14px;
+    margin: 10px 2%;
+    padding: 10px 2%;
+    border-radius: 10px;
+    border: 8px double black;
+  }
+  
+  input[type="submit"] {
+    background-color: var(--box-color);
+    color: var(--font-color);
+  
+  }
+  
+  button {
+    font-size: 20px;
+    margin: 10px 2%;
+    padding: 10px 2%;
+    border-radius: 10px;
+    background-color: var(--box-color);
+    color: var(--font-color);
+    border: 8px double black;
+  }
+  
+  img {
+    max-width: 300px;
+    height: auto;
+    align-self: center;
+    margin-top: 50px;
+  }
+
+  .name {
+    display: block;
+    align-self: center;
+  }
