@@ -2,7 +2,7 @@ import React from 'react';
 
 import TodoList from "./components/TodoComponents/TodoList.js";
 import TodoForm from "./components/TodoComponents/TodoForm.js";
-
+import "./App.css"
 
 let showSearch = false;
 
@@ -24,7 +24,25 @@ const editTask = (obj, id) => {
   return obj;
 }
 
+const handleClearing = (obj) => {
+  const filtered = obj.todo.filter(item => item.completed === false);
+  const filtered2 = obj.searched.filter(item => item.completed === false);
+  obj.todo = filtered;
+  obj.searched = filtered2;
+  return obj;
+}
+
+
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todo: [],
+      searched: [],
+      name: ""
+    };
+  }
+
   
   render() {
     return (
