@@ -43,7 +43,30 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    if (localStorage.getItem("todo")) {
+      this.setState({
+        todo: JSON.parse(localStorage.getItem("todo")),
+        searched: JSON.parse(localStorage.getItem("todo"))
+      });
+    } else {
+      localStorage.setItem("todo", JSON.stringify([]));
+    }
+  }
+
+  componentDidUpdate() {localStorage.setItem("todo", JSON.stringify(this.state.todo));
+}
   
+
+  handleAdd = task => this.setState(addTask(this.state, task));
+  
+
+  todoChange = id => this.setState(editTask(this.state, id));
+  
+
+  handleClear = () => this.setState(handleClearing(this.state));
+  
+
   render() {
     return (
       <div className="app">
